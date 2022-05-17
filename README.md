@@ -1,3 +1,3 @@
 # GUI-CA
-GUi For CA Operating System.
+GUI For CA Operating System.
 
