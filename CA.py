@@ -1,6 +1,7 @@
 while True:
     import os
     import time
+
     if os.path.isfile('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\Wallpaper\\auto.txt') == True:
         pass
     else:
@@ -13,7 +14,6 @@ while True:
         a.close()
         if b == "Enable":
             while True:
-
                 import string
                 import random
                 from colorama import Fore, Style
@@ -55,14 +55,26 @@ while True:
     else:
         pass
 
-
     import datetime
     import time
     import tkinter
-    from tkinter import *
+    from tkinter import Tk
+    from tkinter import Label
+    from tkinter import Button
+    from tkinter import Frame
+    from tkinter import Toplevel
+    from tkinter import Menu
+    from tkinter import END
+    from tkinter import Scrollbar
+    from tkinter import Entry
+    from tkinter import Text
+    from tkinter import BOTH
+    from tkinter import RIGHT
+    from tkinter import Y
     from tkinter import ttk
     from tkinter import messagebox
     from PIL import Image, ImageTk
+
     root = Tk()
     '''tabControl = ttk.Notebook(root)
     tab1 = ttk.Frame(tabControl)
@@ -141,13 +153,18 @@ while True:
     label1 = Label(root, image=dis)
     label1.place(x=20, y=25)
 
-
-
     import os
 
 
     def calc():
         os.startfile('calc.py')
+
+        def displayIntro():
+            import playsound
+
+            playsound.playsound('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\clickbutton.wav', True)
+
+        displayIntro()
 
 
     def openCA():
@@ -158,29 +175,50 @@ while True:
                 b.close()
                 if o1 == "AKV":
                     os.startfile('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\CA.lnk')
+
+                    def displayIntro():
+                        import playsound
+
+                        playsound.playsound('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\clickbutton.wav', True)
+
+                    displayIntro()
                 else:
-                    messagebox.showerror('Activation','First Activate CA')
+                    messagebox.showerror('Activation', 'First Activate CA')
         else:
-            messagebox.showerror('Activation','First Activate CA')
+            messagebox.showerror('Activation', 'First Activate CA')
+
+
     def CA():
         os.startfile('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\CA.lnk')
 
+        def displayIntro():
+            import playsound
 
-    my_button = Button(root, image=dis, command=openCA,cursor='')
+            playsound.playsound('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\clickbutton.wav', True)
+
+        displayIntro()
+
+
+    my_button = Button(root, image=dis, command=openCA, cursor='')
     my_button.place(x=20, y=25)
-    text = Button(root, text="     CA     ", command=openCA,activebackground='lightblue')
+    text = Button(root, text="     CA     ", command=openCA, activebackground='lightblue')
     text.place(x=20, y=90)
     btn = Image.open('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\CA.png')
     btn = btn.resize((30, 30))
     btndis = ImageTk.PhotoImage(btn)
+
+
     def activateca():
-        yesno = messagebox.askyesnocancel('Activation','Are You Sure You Want To Activate CA')
+        yesno = messagebox.askyesnocancel('Activation', 'Are You Sure You Want To Activate CA')
+
         if yesno == True:
             CA()
         elif yesno == False:
-            messagebox.showinfo('Messaage','Thanks For Your Response')
+            messagebox.showinfo('Messaage', 'Thanks For Your Response')
         else:
             pass
+
+
     if os.path.isdir('C:\\CA SOFTWARES') == True:
         if os.path.isfile('C:\\CA SOFTWARES\\done.txt') == True:
             b = open('C:\\CA SOFTWARES\\done.txt', 'r')
@@ -210,6 +248,8 @@ while True:
         acttext = Label(root, text='Activate This PC', font=("arail", 8, "bold"))
         acttext.pack()
         acttext.place(x=1818, y=1010)
+
+
     def run():
         import tkinter
         runit = Tk()
@@ -221,6 +261,14 @@ while True:
         runit.maxsize(200, 150)
         frame = Frame(runit)
         frame.pack()
+
+        def displayIntro():
+            import playsound
+
+            playsound.playsound('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\clickbutton.wav', True)
+
+        displayIntro()
+
         def data():
             dataa = my_entry.get()
             if dataa == 'CA':
@@ -240,38 +288,57 @@ while True:
             elif os.path.isfile(dataa) == True:
                 os.startfile(dataa)
             else:
-                messagebox.showwarning('Error For The App','No App Found')
+                messagebox.showwarning('Error For The App', 'No App Found')
 
         my_entry = Entry(frame, width=20)
         my_entry.insert(0, '')
         my_entry.pack(padx=5, pady=5)
-        butt = Button(runit,text='Enter',command=data,activebackground='lightblue')
+        butt = Button(runit, text='Enter', command=data, activebackground='lightblue')
         butt.pack()
         runit.mainloop()
+
+
     def menu():
+        def displayIntro():
+            import playsound
+
+            playsound.playsound('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\clickbutton.wav', True)
+
+        displayIntro()
+
         menu1 = Toplevel(root, bg='white')
         menu1.title('Menu Bar')
         menu1.iconbitmap('CA.ico')
         menu1.geometry("200x230")
-        menu1.minsize(200,230)
-        menu1.maxsize(200,230)
+        menu1.minsize(200, 230)
+        menu1.maxsize(200, 230)
         menu1.attributes('-alpha', 1)
         import time
-        shoutdown = Button(menu1, text="   Shoutdown   ", command=exit, padx=100,activebackground='lightblue')
-        shoutdown.pack()
-        run1 = Button(menu1, text='Run', command=run, padx=100,activebackground='lightblue')
-        run1.pack()
         def new():
             os.startfile('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\CA.py')
 
-        neww = Button(menu1, text="New Windows", command=new, padx=100,activebackground='lightblue')
+            def displayIntro():
+                import playsound
+
+                playsound.playsound('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\clickit.wav', True)
+
+            displayIntro()
+        neww = Button(menu1, text="New Windows", command=new, padx=100, activebackground='lightblue')
         neww.pack()
+        run1 = tkinter.Button(menu1, text='Run', command=run, padx=100, activebackground='lightblue')
+
+        run1.pack()
+
+        shoutdown = Button(menu1, text="   Exit   ", command=exit, padx=100, activebackground='lightblue')
+        shoutdown.pack()
 
 
     btn1 = Label(root, image=btndis)
     btn1.place(x=0, y=1043)
     my_button = Button(root, image=btndis, command=menu)
     my_button.place(x=0, y=1043)
+
+
     def datetime():
         import datetime
         import time
@@ -284,19 +351,26 @@ while True:
     def python():
         os.startfile('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\venv\\Scripts\\python.exe')
 
+        def displayIntro():
+            import playsound
+
+            playsound.playsound('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\clickbutton.wav', True)
+
+        displayIntro()
+
 
     pythonimg = Image.open('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\python.ico')
     pythonimg = pythonimg.resize((52, 55))
     pythondis = ImageTk.PhotoImage(pythonimg)
     label2 = Label(root, image=pythondis)
     label2.place(x=20, y=150)
-    text1 = Button(root, text=" Python  ", command=python,activebackground='lightblue')
+    text1 = Button(root, text=" Python  ", command=python, activebackground='lightblue')
     text1.place(x=20, y=220)
     my_button1 = Button(root, image=pythondis, command=python)
     my_button1.place(x=20, y=150)
 
-
     import pyautogui
+
     width, height = pyautogui.size()
     rect = Image.open('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\bar.png')
     rect = rect.resize((width, 31))
@@ -304,16 +378,17 @@ while True:
     label1rect = Label(root, image=disrect)
     label1rect.place(x=37, y=1043)
 
-
     note = Image.open('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\calculator.png')
     note = note.resize((53, 50))
     disnote = ImageTk.PhotoImage(note)
     labelnote = Label(root, image=disnote)
     labelnote.place(x=20, y=280)
-    text12 = Button(root, text="    Calc    ", command=calc,activebackground='lightblue')
+    text12 = Button(root, text="    Calc    ", command=calc, activebackground='lightblue')
     text12.place(x=20, y=345)
     my_button12 = Button(root, image=disnote, command=calc)
     my_button12.place(x=20, y=280)
+
+
 
     def textpados():
         import tkinter
@@ -430,10 +505,18 @@ while True:
             Scroll.pack(side=RIGHT, fill=Y)
             Scroll.config(command=TextArea.yview)
             TextArea.config(yscrollcommand=Scroll.set)
+
+            def displayIntro():
+                import playsound
+
+                playsound.playsound('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\clickbutton.wav', True)
+
+            displayIntro()
             root.mainloop()
 
 
     def info():
+
         if os.path.isdir('C:\\CA SOFTWARES') == True:
             if os.path.isfile('C:\\CA SOFTWARES\\done.txt') == True:
                 b = open('C:\\CA SOFTWARES\\done.txt', 'r')
@@ -441,12 +524,32 @@ while True:
                 b.close()
                 if o1 == "AKV":
                     os.startfile('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\venv\\Scripts\\Activated Info.py')
+
+                    def displayIntro():
+                        import playsound
+
+                        playsound.playsound('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\clickbutton.wav', True)
+
+                    displayIntro()
                     pass
                 else:
                     messagebox.showerror('Activation', 'To Use Activation Info First Activate CA')
+
+                    def displayIntro():
+                        import playsound
+
+                        playsound.playsound('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\clickbutton.wav', True)
+
+                    displayIntro()
         else:
             messagebox.showerror('Activation', 'To Use Activation Info First Activate CA')
 
+            def displayIntro():
+                import playsound
+
+                playsound.playsound('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\clickbutton.wav', True)
+
+            displayIntro()
 
 
     note1 = Image.open(
@@ -462,6 +565,15 @@ while True:
     # -------------------------------------------------------------
     def settings():
         os.startfile('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\venv\\Scripts\\set.py')
+        '''import winsound
+        winsound.Beep(1000, 100)'''
+
+        def displayIntro():
+            import playsound
+
+            playsound.playsound('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\clickbutton.wav', True)
+
+        displayIntro()
 
 
     set = Image.open(
@@ -472,9 +584,8 @@ while True:
     labelset.place(x=20, y=405)
     my_buttonset = Button(root, image=disset, command=settings)
     my_buttonset.place(x=20, y=405)
-    settext = Button(root, text=" Settings ", command=settings,activebackground='lightblue')
+    settext = Button(root, text=" Settings ", command=settings, activebackground='lightblue')
     settext.place(x=20, y=475)
-
 
     set1 = Image.open('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\textpad.png')
     set1 = set1.resize((52, 55))
@@ -483,7 +594,7 @@ while True:
     labelsetv.place(x=20, y=535)
     my_buttonsetv = Button(root, image=dissetv, command=textpados)
     my_buttonsetv.place(x=20, y=535)
-    settextv = Button(root, text=" Textpad ", command=textpados,activebackground='lightblue')
+    settextv = Button(root, text=" Textpad ", command=textpados, activebackground='lightblue')
     settextv.place(x=20, y=605)
 
 
@@ -495,41 +606,77 @@ while True:
                 b.close()
                 if o1 == "AKV":
                     os.startfile('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\file.py')
+
+                    def displayIntro():
+                        import playsound
+
+                        playsound.playsound('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\clickbutton.wav', True)
+
+                    displayIntro()
                     pass
                 else:
-                    messagebox.showerror('Activation','To Use Files Activate CA')
+                    messagebox.showerror('Activation', 'To Use Files Activate CA')
         else:
             messagebox.showerror('Activation', 'To Use Files First Activate CA')
 
 
     setw = Image.open('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\616ee6fc4f194-384x384.png')
-    setw = setw.resize((50, 50))
+    setw = setw.resize((52, 55))
     dissetvw = ImageTk.PhotoImage(setw)
     labelsetvw = Label(root, image=dissetvw)
     labelsetvw.place(x=110, y=25)
     my_buttonsetvw = Button(root, image=dissetvw, command=file)
     my_buttonsetvw.place(x=110, y=25)
-    settextvw = Button(root, text="    Files    ", command=file,activebackground='lightblue')
+    settextvw = Button(root, text="    Files    ", command=file, activebackground='lightblue')
     settextvw.place(x=110, y=90)
 
 
     def screenmir():
         from tkinter import messagebox
-        screen = messagebox.askyesno('Message','Have You Inserted USB Cable Into Your PC')
+        def displayIntro():
+            import playsound
+
+            playsound.playsound('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\clickbutton.wav', True)
+
+        displayIntro()
+        screen = messagebox.askyesno('Message', 'Have You Inserted USB Cable Into Your PC')
+
         if screen == True:
             os.startfile('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\scrcpy.py')
+
+            def displayIntro():
+                import playsound
+
+                playsound.playsound('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\clickbutton.wav', True)
+
+            displayIntro()
+        else:
+            def displayIntro():
+                import playsound
+
+                playsound.playsound('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\clickbutton.wav', True)
+
+            displayIntro()
+
+
     screen = Image.open('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\images.png')
-    screen = screen.resize((52, 54))
+    screen = screen.resize((53, 52))
     screenmirr = ImageTk.PhotoImage(screen)
     labelscreen = Label(root, image=screenmirr)
     labelscreen.place(x=110, y=150)
     my_buttonscreen = Button(root, image=screenmirr, command=screenmir)
     my_buttonscreen.place(x=110, y=150)
-    settextscreen = Button(root, text="  Scrcpy   ", command=screenmir,activebackground='lightblue')
+    settextscreen = Button(root, text="Scrcpy", command=screenmir, activebackground='lightblue', padx=7.7)
+    settextscreen.pack()
     settextscreen.place(x=110, y=219)
 
-
     def do_pop(event):
+        def displayIntro():
+            import playsound
+
+            playsound.playsound('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\clickbutton.wav', True)
+
+        displayIntro()
         m.tk_popup(event.x_root, event.y_root)
         m.grab_release()
         pass
@@ -538,32 +685,69 @@ while True:
     def newpop():
         os.startfile('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\CA.py')
 
+        def displayIntro():
+            import playsound
+
+            playsound.playsound('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\clickit.wav', True)
+
+        displayIntro()
+
 
     def pop():
         pass
 
 
     def autowalle():
+        def displayIntro():
+            import playsound
+
+            playsound.playsound('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\clickbutton.wav', True)
+
+        displayIntro()
         wall = open('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\Wallpaper\\auto.txt', 'w')
         wall.write('autowallpaperenable')
         wall.close()
 
 
     def autowalld():
+        def displayIntro():
+            import playsound
+
+            playsound.playsound('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\clickbutton.wav', True)
+
+        displayIntro()
         wall = open('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\Wallpaper\\auto.txt', 'w')
         wall.write('autowallpaperdisable')
         wall.close()
 
 
     def snake():
+        def displayIntro():
+            import playsound
+
+            playsound.playsound('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\clickbutton.wav', True)
+
+        displayIntro()
         os.startfile('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\snake.py')
 
 
     def shoutdownthispc():
+        def displayIntro():
+            import playsound
+
+            playsound.playsound('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\clickbutton.wav', True)
+
+        displayIntro()
         os.system("shutdown /s /t 1")
 
 
     def act():
+        def displayIntro():
+            import playsound
+
+            playsound.playsound('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\clickbutton.wav', True)
+
+        displayIntro()
         if os.path.isdir('C:\\CA SOFTWARES') == True:
             if os.path.isfile('C:\\CA SOFTWARES\\done.txt') == True:
                 b = open('C:\\CA SOFTWARES\\done.txt', 'r')
@@ -578,7 +762,7 @@ while True:
             messagebox.showerror('Activation', 'To Use Activation Info First Activate CA')
 
 
-    m = Menu(root, tearoff=False,cursor='spider')
+    m = Menu(root, tearoff=False, cursor='spider')
     m.add_command(label='''
                 CA SOFTWARES
 
@@ -596,19 +780,33 @@ while True:
     m.add_command(label='-------------------------------------', command=pop)
     m.add_command(label='CA Corporation. All rights reserved', command=pop)
     root.bind("<Button-3>", do_pop)
+    def leftkey(event):
+        act()
+    root.bind('<Double-Button-2>',leftkey)
 
-    def timing ():
+    def timing():
         def time():
-            string = strftime('%H:%M:%S %p')
+            string = strftime('%H:%M:%S %p %a')
             clock.config(text=string)
             clock.after(1000, time)
 
         from time import strftime
 
-        clock = Label(root, font=("arial", 10))
+        clock = Label(root, font=("arial", 10), background='white')
         clock.pack()
-        clock.place(x=width-95, y=1050)
+        clock.place(x=width - 120, y=1050)
         time()
+
+        def presskey():
+            import keyboard
+
+            if keyboard.read_key() == "s":
+                def displayIntro():
+                    import playsound
+
+                    playsound.playsound('C:\\Users\\Admin\\Desktop\\CA SOFTWARES\\CA\\clickbutton.wav', True)
+
+                displayIntro()
 
         def timedate():
             import datetime
@@ -616,9 +814,11 @@ while True:
             date.config(text=datestr)
             date.after(8640000, timedate)
 
-        date = Label(root, font=("arial", 10))
+        date = Label(root, font=("arial", 10), background='white')
         date.pack()
-        date.place(x=width-180, y=1050)
+        date.place(x=width - 200, y=1050)
         timedate()
+
+
     timing()
     root.mainloop()
